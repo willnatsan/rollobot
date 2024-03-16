@@ -1,5 +1,5 @@
-# Autonomous Mobile Robot
-An autonomous mobile robot, built using ROS and Raspberry Pi. The robot will be capable of three core functionalities:
+# RolloBot - An Autonomous Mobile Robot 
+An autonomous differential drive mobile robot, built using ROS and Raspberry Pi. The robot will be capable of three core functionalities:
 1. Teleoperation
 2. Simultaneous Localisation & Mapping
 3. Object Tracking
