@@ -30,7 +30,7 @@ def generate_launch_description():
     )
 
     rviz_config_file = PathJoinSubstitution(
-        [FindPackageShare('ur10e_description'), 'rviz', 'view_robot.rviz']
+        [FindPackageShare('rollobot'), 'rviz', 'view_robot.rviz']
     )
     
     node_rviz2 = Node(
