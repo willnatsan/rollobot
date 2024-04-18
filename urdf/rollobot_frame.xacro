@@ -67,4 +67,9 @@
         </xacro:inertial_sphere>
     </link>
 
+    <gazebo reference="caster_wheel">
+        <mu1 value="0.001" />
+        <mu2 value="0.001" />
+    </gazebo>
+
 </robot>

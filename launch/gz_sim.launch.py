@@ -9,15 +9,15 @@ from ament_index_python import get_package_share_directory
 
 def generate_launch_description():
     # Configure URDF file
-    urdf_pkg_share = get_package_share_directory('rollobot')
+    pkg_share = get_package_share_directory('rollobot')
     urdf_path_local = 'urdf/rollobot.urdf.xacro'
-    urdf_path_global = join(urdf_pkg_share, urdf_path_local)
+    urdf_path_global = join(pkg_share, urdf_path_local)
     robot_description_raw = xacro.process_file(urdf_path_global).toxml()
 
     # Launch Gazebo 
     gz_pkg_share = get_package_share_directory('ros_gz_sim')
     launch_gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([join(gz_pkg_share, 'launch', 'gz_sim.launch.py')])
+        PythonLaunchDescriptionSource([join(gz_pkg_share, 'launch', 'gz_sim.launch.py')]),
     )
 
     # Configure nodes to launch
@@ -38,7 +38,6 @@ def generate_launch_description():
         arguments=[
             '-topic', 'robot_description', 
             '-name', robot_name, 
-            # '-world', 'default'
         ],
         parameters=[{'use_sim_time': True}],
         output='screen',
