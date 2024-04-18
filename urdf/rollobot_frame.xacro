@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<robot name="rollobot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <link name="base_link"></link>
+    <link name="base_link">
+    </link>
 
     <joint name="chassis_joint" type="fixed">
         <parent link="base_link"/>
