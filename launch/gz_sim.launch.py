@@ -16,8 +16,10 @@ def generate_launch_description():
 
     # Launch Gazebo 
     gz_pkg_share = get_package_share_directory('ros_gz_sim')
+    world_path = join(pkg_share, 'worlds', 'obstacles.world')
     launch_gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([join(gz_pkg_share, 'launch', 'gz_sim.launch.py')]),
+        launch_arguments={'world': world_path}.items()
     )
 
     # Configure nodes to launch
