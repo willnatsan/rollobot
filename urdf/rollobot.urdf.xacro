@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot name="rollobot">
     
-    <xacro:include filename="rollobot_frame.xacro"/>
+    <xacro:include filename="rollobot_macros.xacro" />   
+    <xacro:include filename="rollobot_frame.xacro" />
 
 </robot>
